@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>User-Login</title>
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="./fontawesome-free-5.12.1-web/css/all.css">
+ <link rel="stylesheet" href="./css/main.css">
+ 
+</head>
+<body>
+
+  <!-- login -->
+
+  <!-- user title -->
+  <header class="header">
+      <div class="quick-meds">
+        <h3>quick <span class="blue">meds</span></h3>
+      </div>
+  </header>
+
+
+
+ <!-- user types -->
+
+ <section class="users-section">
+
+   <article class="users section-center">
+  <!-- user-Log -->
+  <div class=" user-logging ">
+   <form   action=""
+   method="POST" >
+   <div class="form-group">
+    <input type="text"
+    placeholder="User Name" 
+    class="form-control"
+    name="name"/>
+    <input type="password"
+    placeholder="Password"
+    class="form-control"
+    name="email"/>
+    <!-- <textarea name="message"
+     placeholder="Message"
+     id="" cols="30" rows="5" class="form-control"></textarea> -->
+     
+    </div>
+    <!-- button -->
+    <button type="submit" class="btn submit-btn">Login </button>
+   </form>
+   <div class="new-account">
+    <a href="UserSignUp.html" target="new">
+    <h5>dont have an account?</h5>
+  </a>
+  </div>
+   <!-- end of user-Log -->
+
+  </div>
+
+  
+  <div class="user-container section-center">
+   
+   <!-- user -->
+   <div class="user user-card user-log">
+    <div class="user-icon">
+     <i class="fas fa-user"></i>
+    </div>
+    <div class="users-text">
+      <h2>User</h2>
+    </div>
+   </div>
+   <!-- pharmacy -->
+   <div class="pharmacy user-card user-log">
+    <div class="user-icon">
+     <i class="fas fa-prescription-bottle-alt"></i>
+    </div>
+    <div class="users-text">
+     <h2>Pharmacy</h2>
+   </div>
+   </div>
+  </div>
+  </article>
+
+  <article class="admin-login section-center">
+   <button class="btn btn-admin">
+    <h4 class="admin-text">admin</h4>
+   </button>
+   </article>
+
+
+
+ </section>
+
+
+
+
+ <!-- end of user types -->
+
+
+
+
+ <div class="overlay"></div>
+
+ <script src="script.js"></script>
+</body>
+</html>

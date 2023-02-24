@@ -1,0 +1,468 @@
+/*
+=============== 
+Fonts
+===============
+*/
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Modak&family=Oswald:wght@300;400;500&family=Quattrocento+Sans&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+:root {
+ /* primary */
+ 
+ --primaryb-1:#0A2733;
+ --primaryb-2:#003566;
+ --primaryb-3:#1e7499;
+ --primaryb-4:rgb(51, 165, 215);
+ --primaryb-5:#88CBE7;
+
+ --primaryp-1:#9D064A;
+ --primaryp-2:#D90866;
+ --primaryp-3:#F83A90;
+ --primaryp-4:#FA75B1;
+ --primaryp-4:#FCB0D2;
+ 
+
+ /* grey */
+--greyClr-5:#212529;
+--greyClr-4:#343a40;
+--greyClr-3:rgb(73, 80, 87);
+--greyClr-2:#6c757d;
+--greyClr-1:#ced4da;
+
+--clrWhite:#fff;
+--clrWhite-2:#F8F9FA;
+--clrWhite-3:#F3F5F7;
+--clrWhite-4:#F8F5DD;
+
+
+ --ff-primary: 'Oswald', sans-serif;
+ --ff-secondary: 'Quattrocento Sans', sans-serif;
+ --transition: all 0.3s linear;
+ --spacing: 0.25rem;
+ --radius: 0.5rem;
+ --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ --max-width: 1170px;
+}
+
+/*
+=============== 
+global Variables
+===============
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-white);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img{
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+.section-title{
+  color: var(--clrWhite-2);
+  font-size: 2rem;
+  letter-spacing: var(--spacing);
+
+}
+
+.btn{
+ padding :0.5rem 1.5rem;
+ background: var(--primaryClr-7);
+ border-radius: var(--radius);
+ text-transform: uppercase;
+ color: var(--greyClr-3);
+ font-size: 1.2rem;
+ letter-spacing: var(--spacing);
+ border: 2px solid transparent;
+ cursor: pointer;
+ box-shadow: var(--dark-shadow);
+ transition: var(--transition);
+ display: inline-block;
+ margin-bottom: 1rem;
+}
+.btn:hover{
+ background: var(--primaryClr-4);
+ transform: scale(1.01);
+ /* border-color: var(--primaryClr-9); */
+}
+.section-center{
+ width:90vw;
+ max-width: 1170px;
+ margin :0 auto;
+ transition: transform 1s ,opacity 0.8s ;
+}
+/* section{
+  transition: transform 1s ,opacity 0.1s ,overflow 0.1s ;
+} */
+.section-hidden{
+  transform: translateY(20%);
+  opacity: 0;
+  overflow: hidden;
+}
+.img{
+ width: 100%;
+ display: block;
+}
+
+/* .section-hidden{
+  opacity:0;
+  display:none;
+} */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* @media  screen and (min-width:1170px) {
+ .section-center{
+  width: 95vw;
+ }
+ 
+} */
+/* ===================================
+User-section
+====================================== */
+
+.users-section{
+  height: 100%;
+  display: grid;
+  background: url("../images/background.jpg") center/cover fixed ;
+}
+
+.form-group{
+  padding: 1rem 1.5rem;
+}
+.form-control{
+  display: block;
+  width: 100%;
+  border-radius: var(--radius);
+padding: 0.75rem;
+border: none;
+margin-bottom: 1.25rem;
+background-color: var(--clr-grey-10);
+text-transform: uppercase;
+letter-spacing: var(--spacing);
+}
+.submit-btn{
+  width: 100%;
+  border-bottom-left-radius:var(--radius) ;
+  border-bottom-right-radius:var(--radius) ;
+  display: block;
+}
+.form-control::placeholder{
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  color: var(--clr-grey-1);
+}
+
+@media screen and (min-width:992px){
+  .contact-form ,.contact-info{
+    float: left;
+    width: 50%;
+  }
+}
+
+.footer{
+  background: #222;
+  text-align: center;
+  color: var(--clr-white);
+}
+.social-icon{
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+
+.social-icon:hover{
+  color: var(--clr-primary);
+}
+.footer-text{
+  margin-top: 1rem;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  font-weight: 400;
+}
+
+.company{
+  color: var(--clr-primary);
+  font-weight: 700;
+}
+
+/* user */
+
+.user-icon{
+  color: black;
+  font-size: 15rem;
+}
+
+.user-logging{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background-color: var(--primaryb-5);
+  border-radius: 15%;
+  padding: 5rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.user-container{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  height: 100vh;
+}
+@media screen and (max-width:762px){
+  .user-container{
+    grid-template-columns: 1fr;
+  }
+  
+}
+.user-card{
+  background:rgba(51, 165, 215,0.8);
+  align-items: center;
+  text-align: center;
+  border-radius: 15%;
+  /* transition: var(--transition); */
+  width: 100%;
+  max-width: 20rem;
+  max-height: 30rem;
+  cursor: pointer;
+  margin: 2rem 0.6rem;
+}
+.user-card:hover{
+  background: var(--primaryb-3);
+  color: var(--clrWhite-4);
+}
+.user-card:hover .user-icon i{
+  background: var(--primaryb-3);
+  color: var(--clrWhite-4);
+}
+
+.users{
+  padding: 4rem 0;
+}
+
+.admin-login{
+  margin: 0 auto;
+  /* display: block; */
+  text-align:center;
+}
+/* .admin-login:hover .admin-text{
+  /* color:var(--clrWhite); */
+
+.admin-text{
+  text-transform: uppercase;
+  margin:0 0;
+  display: block;
+}
+
+
+
+
+
+/* ======================================== */
+/* header */
+
+.header{
+  height: 4rem;
+  background-color: var(--primaryb-5);
+  margin :0;
+  padding:0;
+}
+.quick-meds{
+  padding:0.5rem;
+  color: var(--clrWhite);
+}
+.blue{
+  color: var(--primaryb-2);
+}
+
+
+
+/* order */
+
+.order-text{
+  letter-spacing: var(--spacing);
+  font-size: 0.7rem;
+}
+
+.order-form{
+  max-width: 40rem;
+  min-width: 25rem;
+}
+
+.order-section{
+   background: linear-gradient(rgba(255, 195, 0,0.4),rgba(255,255,255,0.8)),url("../images/ORDER.jpg") center/cover fixed ;
+  height: 100vh;
+} 
+
+.title h2{
+  padding: 0;
+  width: 80%;
+   margin-left : 2rem;
+}
+
+
+ /* =========================
+footer
+======================= */
+
+.footer{
+  background: var(--greyClr-5);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.footer p{
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  color: var(--clrWhite-2);
+  padding: 1rem 1rem;
+}
+
+
+
+
+/* sign up */
+.form-section{
+  display:inline-block;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 700px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  margin-left: 400px;
+}
+
+.signup-head{
+  display:inline-block;
+  font-size: 60px;
+  vertical-align: top;
+}
+
+.logo{
+  vertical-align: top;
+  width: 400px;
+  margin-top: 150px;
+  margin-left: 150px;
+}
+
+input{
+  margin-bottom: 14px;
+  width: 500px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 14px;
+  padding-top: 10px;
+}
+
+input::placeholder{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+
+#agree{
+  width: 25px;
+}
+
+.pharm-signup{
+  background-image: url("../images/background1.jpg")  ;
+}
+.user-signup{
+  background-image: url("../images/background1.jpg") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
